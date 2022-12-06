@@ -1,0 +1,73 @@
+{
+    "name": "Subang",
+    "center": [
+        -6.487607732172931,
+        107.77769832685279
+    ],
+    "distribution": [
+        {
+            "name": "Cabai",
+            "routes": [
+                [
+                    -6.301100075813153,
+                    107.29621101693745
+                ],
+                [
+                    -6.98113706223038,
+                    108.49292547018796
+                ]
+            ],
+            "color": "#FF0000",
+            "data": [
+                {
+                    "availability": 56000,
+                    "distributed": 103000
+                },
+                {
+                    "availability": 50200,
+                    "distributed": 103000
+                },
+                {
+                    "availability": 54000,
+                    "distributed": 102000
+                },
+                {
+                    "availability": 504300,
+                    "distributed": 102000
+                },
+                {
+                    "availability": 50300,
+                    "distributed": 104000
+                },
+                {
+                    "availability": 53000,
+                    "distributed": 1032000
+                },
+                {
+                    "availability": 503400,
+                    "distributed": 100300
+                },
+                {
+                    "availability": 50200,
+                    "distributed": 1005300
+                },
+                {
+                    "availability": 50300,
+                    "distributed": 105000
+                },
+                {
+                    "availability": 500320,
+                    "distributed": 1063000
+                },
+                {
+                    "availability": 50700,
+                    "distributed": 150000
+                },
+                {
+                    "availability": 53000,
+                    "distributed": 120000
+                }
+            ]
+        }
+    ]
+}

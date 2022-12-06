@@ -1,13 +1,18 @@
 import Image from "next/image";
 import {
-	useCallback,
-	useState,
+	useState
 } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import * as Karawang from "../public/Karawang.json";
 import * as Purwakarta from "../public/Purwakarta.json";
+import * as Subang from "../public/Subang.json";
+import * as Indramayu from "../public/Indramayu.json";
+import * as Majalengka from "../public/Majalengka.json";
+import * as Kuningan from "../public/Kuningan.json";
+import * as KabCirebon from "../public/KabCirebon.json";
+import * as KotaCirebon from "../public/KotaCirebon.json";
 import {
 	Chart as ChartJS,
 	CategoryScale,
@@ -71,7 +76,13 @@ export default function Home() {
 	const [currentMonth, setCurrentMonth] = useState("");
 	const cities = [
 		Karawang,
-		Purwakarta
+		Purwakarta,
+		Subang,
+		Indramayu,
+		Majalengka,
+		Kuningan,
+		KabCirebon,
+		KotaCirebon
 	];
 
 	const [map, setMap] = useState<google.maps.Map | null>(null);
