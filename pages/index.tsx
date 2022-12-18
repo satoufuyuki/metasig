@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {
+	useEffect,
 	useState
 } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
@@ -39,33 +40,36 @@ ChartJS.register(
 export default function Home() {
 	const refreshMaps = (active: typeof cities[0]) => {
 		map?.panTo({ lat: active.center[0], lng: active.center[1] });
-		setMap(map);
 		if (polylines.length) {
 			for (const polyline of polylines) {
 				polyline.setMap(null);
 			}
+
+			setPolylines([]);
 		}
 
 		if (currentMonth !== "") {
 			for (const distribution of active.distribution) {
-				const flightPath = new window.google.maps.Polyline({
-					path: distribution.routes.map(x => ({ lat: x[0], lng: x[1] })),
-					geodesic: true,
-					strokeColor: distribution.color,
-					strokeOpacity: 1.0,
-					strokeWeight: 2,
-					icons: [
-						{
-							icon: {
-								path: window.google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+				for (let route of distribution.routes) {
+					const flightPath = new window.google.maps.Polyline({
+						path: route.map(x => ({ lat: x[0], lng: x[1] })),
+						geodesic: true,
+						strokeColor: distribution.color,
+						strokeOpacity: 1.0,
+						strokeWeight: 2,
+						icons: [
+							{
+								icon: {
+									path: window.google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+								},
+								offset: "100%",
 							},
-							offset: "100%",
-						},
-					],
-				});
-				
-				flightPath.setMap(map);
-				setPolylines(old => old.concat(flightPath));
+						],
+					});
+					
+					flightPath.setMap(map);
+					setPolylines(old => [...old, flightPath]);
+				}
 			}
 		}
 	}
@@ -85,13 +89,17 @@ export default function Home() {
 		KotaCirebon
 	];
 
+	useEffect(() => {
+		refreshMaps(cities[currentActive]);
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [currentActive, currentMonth]);
+
 	const [map, setMap] = useState<google.maps.Map | null>(null);
 
 	return (
 		<div className="flex flex-col justify-between min-h-screen">
 		<Navbar/>
-		<br></br>
-		<br></br>
+		<div className="h-[4rem]"></div>
 		<section className="flex justify-center items-center w-full mt-10">
 			<div className="w-[90%] flex flex-col">
 				<div className="inline-flex items-center justify-center gap-x-4">
@@ -104,19 +112,17 @@ export default function Home() {
 					></Image>
 					<h1 className="font-bold lg:text-3xl text-xl">Peta Persebaran Distribusi</h1>
 				</div>
-				<select onChange={e => {
+				<select defaultValue={"default"} onChange={e => {
 					setCurrentMonth(e.target.value);
-					refreshMaps(cities[currentActive]);
 				}} className="select w-full lg:max-w-xs mt-5">
-					<option disabled selected>Pilih Bulan</option>
+					<option disabled value="default">Pilih Bulan</option>
 					{months.map((x, i) => (<option key={i} value={x}>{x}</option>))}
 				</select>
 				<br></br>
 				<nav>
 					{cities.map((x, i) => (<button 
-						className={`transition-all ease-in-out delay-100 p-4 rounded-t-lg ${currentActive === i ? "bg-base-300" : "hover:bg-base-100"}`} onClick={() => {
+						className={`transition-all ease-in-out delay-100 p-4 rounded-lg lg:rounded-b-none lg:rounded-t-lg ${currentActive === i ? "bg-base-300" : "hover:bg-base-100"}`} onClick={() => {
 							setActive(i);
-							refreshMaps(cities[currentActive]);
 						}} key={i}>{x.name}</button>
 					))}
 				</nav>
@@ -231,6 +237,7 @@ export default function Home() {
 					></Image>
 					<h1 className="font-bold lg:text-3xl text-xl">Grafik Distribusi</h1>
 				</div>
+				<div className="h-[1.5rem]"></div>
 				<div className="flex flex-col gap-y-5 lg:flex-row items-center justify-center gap-x-5 mt-4">
 					<div className="transition-all ease-in-out delay-150 w-[350px] h-[190px] md:w-[400px] md:h-[250px] lg:w-[450px] lg:h-[250px] bg-base-200 p-4 rounded-md shadow-md">
 						<Line
@@ -280,6 +287,32 @@ export default function Home() {
 									label: d.name,
 									borderColor: d.color,
 									data: d.data.map(x => x.distributed)
+								}))
+							}}
+						/>
+					</div>
+					<div className="transition-all ease-in-out delay-150 w-[350px] h-[190px] md:w-[400px] md:h-[250px] lg:w-[450px] lg:h-[250px] bg-base-200 p-4 rounded-md shadow-md">
+						<Line
+							options={{
+								backgroundColor: "#FFFFFF",
+								responsive: true,
+								plugins: {
+									legend: {
+										display: true,
+										position: "top"
+									},
+									title: {
+										display: true,
+										text: "Harga Bahan Pangan"
+									}
+								}
+							}}
+							data={{
+								labels: months,
+								datasets: cities[currentActive].distribution.map(d => ({
+									label: d.name,
+									borderColor: d.color,
+									data: d.data.map(x => x.price)
 								}))
 							}}
 						/>

@@ -3,9 +3,9 @@ import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 
 export default function About() {
-    return (<div className="flex flex-col justify-between min-h-screen">
+    return (<>
         <Navbar/>
-        <div></div>
+		<div className="h-[6rem]"></div>
         <div className="w-full flex justify-center items-center mt-5">
             <div className="w-[90%] flex flex-col gap-y-7">
                 <div>
@@ -30,6 +30,8 @@ export default function About() {
                 </div>
             </div>
         </div>
+        
+		<div className="h-[5rem]"></div>
         <Footer/>
-    </div>)
+    </>)
 }

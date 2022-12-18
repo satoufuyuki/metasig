@@ -27,7 +27,7 @@ export function Navbar() {
 					className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
 				>
 					<li>
-                        <Link href="/">Homepage</Link>
+                        <Link href="/" replace={true}>Homepage</Link>
 					</li>
 					<li>
                         <Link href="/about">About</Link>

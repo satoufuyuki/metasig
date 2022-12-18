@@ -1,71 +1,397 @@
 {
     "name": "Indramayu",
     "center": [
-        -6.487607732172931,
-        107.77769832685279
+        -6.363140879496596, 108.15298910852216
     ],
     "distribution": [
         {
             "name": "Cabai",
             "routes": [
                 [
-                    -6.301100075813153,
-                    107.29621101693745
+                    [
+                        -6.315420197157543, 108.30663477118544
+                    ],
+                    [
+                        -6.301100075813153,
+                        107.29621101693745
+                    ]
                 ],
                 [
-                    -6.98113706223038,
-                    108.49292547018796
+                    [
+                        -6.315420197157543, 108.30663477118544
+                    ],
+                    [
+                        -6.98113706223038,
+                        108.49292547018796
+                    ]
                 ]
             ],
             "color": "#FF0000",
             "data": [
                 {
-                    "availability": 56000,
-                    "distributed": 103000
+                    "availability": 87919,
+                    "distributed": 75697,
+                    "price": 4739
                 },
                 {
-                    "availability": 50200,
-                    "distributed": 103000
+                    "availability": 21140,
+                    "distributed": 20515,
+                    "price": 7223
                 },
                 {
-                    "availability": 54000,
-                    "distributed": 102000
+                    "availability": 65640,
+                    "distributed": 58259,
+                    "price": 8907
                 },
                 {
-                    "availability": 504300,
-                    "distributed": 102000
+                    "availability": 60002,
+                    "distributed": 46613,
+                    "price": 5546
                 },
                 {
-                    "availability": 50300,
-                    "distributed": 104000
+                    "availability": 70056,
+                    "distributed": 67576,
+                    "price": 8272
                 },
                 {
-                    "availability": 53000,
-                    "distributed": 1032000
+                    "availability": 87325,
+                    "distributed": 65120,
+                    "price": 3558
                 },
                 {
-                    "availability": 503400,
-                    "distributed": 100300
+                    "availability": 39384,
+                    "distributed": 83048,
+                    "price": 8337
                 },
                 {
-                    "availability": 50200,
-                    "distributed": 1005300
+                    "availability": 28004,
+                    "distributed": 31574,
+                    "price": 5161
                 },
                 {
-                    "availability": 50300,
-                    "distributed": 105000
+                    "availability": 53805,
+                    "distributed": 24420,
+                    "price": 6159
                 },
                 {
-                    "availability": 500320,
-                    "distributed": 1063000
+                    "availability": 34277,
+                    "distributed": 85376,
+                    "price": 7202
                 },
                 {
-                    "availability": 50700,
-                    "distributed": 150000
+                    "availability": 32116,
+                    "distributed": 93894,
+                    "price": 9994
                 },
                 {
-                    "availability": 53000,
-                    "distributed": 120000
+                    "availability": 98901,
+                    "distributed": 32836,
+                    "price": 3715
+                }
+            ]
+        },
+        {
+            "name": "Beras",
+            "routes": [
+                [
+                    [
+                        -6.315420197157543, 108.30663477118544
+                    ],
+                    [
+                        -6.301100075813153,
+                        107.29621101693745
+                    ]
+                ]
+            ],
+            "color": "#F5DEB3",
+            "data": [
+                {
+                    "availability": 16011,
+                    "distributed": 86430,
+                    "price": 5339
+                },
+                {
+                    "availability": 79469,
+                    "distributed": 35235,
+                    "price": 4243
+                },
+                {
+                    "availability": 82097,
+                    "distributed": 62900,
+                    "price": 6119
+                },
+                {
+                    "availability": 12246,
+                    "distributed": 92017,
+                    "price": 7301
+                },
+                {
+                    "availability": 47544,
+                    "distributed": 14869,
+                    "price": 5379
+                },
+                {
+                    "availability": 62611,
+                    "distributed": 34438,
+                    "price": 6025
+                },
+                {
+                    "availability": 51502,
+                    "distributed": 17769,
+                    "price": 7084
+                },
+                {
+                    "availability": 41725,
+                    "distributed": 42086,
+                    "price": 5818
+                },
+                {
+                    "availability": 61526,
+                    "distributed": 78411,
+                    "price": 7250
+                },
+                {
+                    "availability": 41469,
+                    "distributed": 24466,
+                    "price": 7082
+                },
+                {
+                    "availability": 98973,
+                    "distributed": 38950,
+                    "price": 7757
+                },
+                {
+                    "availability": 95598,
+                    "distributed": 77063,
+                    "price": 5564
+                }
+            ]
+        },
+        {
+            "name": "Bawang Merah",
+            "routes": [
+                [
+                    [
+                        -6.315420197157543, 108.30663477118544
+                    ],
+                    [
+                        -6.9380415185886415, 107.62633407740016
+                    ]
+                ]
+            ],
+            "color": "#B96C93",
+            "data": [
+                {
+                    "availability": 76295,
+                    "distributed": 87163,
+                    "price": 9826
+                },
+                {
+                    "availability": 11296,
+                    "distributed": 65939,
+                    "price": 9222
+                },
+                {
+                    "availability": 65047,
+                    "distributed": 32888,
+                    "price": 4019
+                },
+                {
+                    "availability": 95895,
+                    "distributed": 26820,
+                    "price": 3679
+                },
+                {
+                    "availability": 51862,
+                    "distributed": 64298,
+                    "price": 9182
+                },
+                {
+                    "availability": 85265,
+                    "distributed": 53864,
+                    "price": 9853
+                },
+                {
+                    "availability": 61265,
+                    "distributed": 77760,
+                    "price": 6665
+                },
+                {
+                    "availability": 22365,
+                    "distributed": 26309,
+                    "price": 9836
+                },
+                {
+                    "availability": 53103,
+                    "distributed": 73557,
+                    "price": 6645
+                },
+                {
+                    "availability": 75254,
+                    "distributed": 24888,
+                    "price": 4586
+                },
+                {
+                    "availability": 83866,
+                    "distributed": 94097,
+                    "price": 5671
+                },
+                {
+                    "availability": 23381,
+                    "distributed": 85986,
+                    "price": 9593
+                }
+            ]
+        },
+        {
+            "name": "Bawang Putih",
+            "routes": [
+                [
+                    [
+                        -6.315420197157543, 108.30663477118544
+                    ],
+                    [
+                        -6.399755984181943, 108.14182635038645
+                    ]
+                ]
+            ],
+            "color": "#6b5628",
+            "data": [
+                {
+                    "availability": 13231,
+                    "distributed": 40786,
+                    "price": 6868
+                },
+                {
+                    "availability": 59211,
+                    "distributed": 22729,
+                    "price": 9909
+                },
+                {
+                    "availability": 51805,
+                    "distributed": 58808,
+                    "price": 9417
+                },
+                {
+                    "availability": 62540,
+                    "distributed": 95033,
+                    "price": 8354
+                },
+                {
+                    "availability": 64216,
+                    "distributed": 54161,
+                    "price": 6558
+                },
+                {
+                    "availability": 65405,
+                    "distributed": 68481,
+                    "price": 4560
+                },
+                {
+                    "availability": 85980,
+                    "distributed": 93120,
+                    "price": 8646
+                },
+                {
+                    "availability": 17192,
+                    "distributed": 16056,
+                    "price": 8447
+                },
+                {
+                    "availability": 76546,
+                    "distributed": 13712,
+                    "price": 9867
+                },
+                {
+                    "availability": 76564,
+                    "distributed": 59162,
+                    "price": 6310
+                },
+                {
+                    "availability": 84029,
+                    "distributed": 21881,
+                    "price": 6729
+                },
+                {
+                    "availability": 42626,
+                    "distributed": 60153,
+                    "price": 6955
+                }
+            ]
+        },
+        {
+            "name": "Tomat",
+            "routes": [
+                [
+                    [
+                        -6.315420197157543, 108.30663477118544
+                    ],
+                    [
+                        -6.666283145758895, 108.06580865224898
+                    ]
+                ]
+            ],
+            "color": "#600000",
+            "data": [
+                {
+                    "availability": 71381,
+                    "distributed": 81891,
+                    "price": 3898
+                },
+                {
+                    "availability": 95707,
+                    "distributed": 51167,
+                    "price": 6066
+                },
+                {
+                    "availability": 53494,
+                    "distributed": 67701,
+                    "price": 9764
+                },
+                {
+                    "availability": 63524,
+                    "distributed": 57461,
+                    "price": 7924
+                },
+                {
+                    "availability": 48864,
+                    "distributed": 80096,
+                    "price": 4855
+                },
+                {
+                    "availability": 50906,
+                    "distributed": 31745,
+                    "price": 9816
+                },
+                {
+                    "availability": 33370,
+                    "distributed": 47045,
+                    "price": 8871
+                },
+                {
+                    "availability": 34055,
+                    "distributed": 87885,
+                    "price": 4913
+                },
+                {
+                    "availability": 50796,
+                    "distributed": 79716,
+                    "price": 8639
+                },
+                {
+                    "availability": 31626,
+                    "distributed": 84097,
+                    "price": 6320
+                },
+                {
+                    "availability": 19060,
+                    "distributed": 49995,
+                    "price": 9934
+                },
+                {
+                    "availability": 98717,
+                    "distributed": 88858,
+                    "price": 7021
                 }
             ]
         }
